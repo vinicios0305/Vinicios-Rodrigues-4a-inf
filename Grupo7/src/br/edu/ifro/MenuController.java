@@ -10,7 +10,9 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 
 /**
  *
@@ -19,15 +21,22 @@ import javafx.scene.control.Label;
 public class MenuController implements Initializable {
     
     @FXML
-    private Label label;
+    private TextField txtnumero1, txtnumero2, txtresultado;
     
     @FXML
-    private void handleButtonAction(ActionEvent event) {
-        System.out.println("You clicked me!");
-        label.setText("Hello World!");
-    }
+    private Button btnsoma;
     
-    @Override
+    
+    @FXML
+    private void somar (ActionEvent event) {
+     Double n1, n2 ,result;
+        n1 = Double.parseDouble(txtnumero1.getText());
+        n2 = Double.parseDouble(txtnumero2.getText());
+        result = n1 + n2;
+        txtresultado.setText(result.toString()); 
+    
+    }
+     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
