@@ -9,13 +9,23 @@
 
 <AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifro.MenuController">
     <children>
-        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
-      <TextField fx:id="txtresultado" layoutX="89.0" layoutY="145.0" />
-      <TextField fx:id="txtnumero1" layoutX="89.0" layoutY="26.0" />
-      <TextField fx:id="txtnumero2" layoutX="89.0" layoutY="60.0" prefHeight="25.0" prefWidth="149.0" />
-      <Label layoutX="22.0" layoutY="30.0" text="Número 1:" />
-      <Label layoutX="22.0" layoutY="64.0" text="Número 2:" />
-      <Label layoutX="22.0" layoutY="149.0" text="Resultado:" />
-      <Button fx:id="btnsoma" layoutX="138.0" layoutY="100.0" mnemonicParsing="false" onAction="#somar" text="Soma" />
+        <Label fx:id="label" layoutX="134.0" layoutY="136.0" minHeight="16" minWidth="69" />
+      <TextField fx:id="txtresultado" layoutX="97.0" layoutY="161.0" />
+      <TextField fx:id="txtnumero1" layoutX="97.0" layoutY="42.0" />
+      <TextField fx:id="txtnumero2" layoutX="97.0" layoutY="76.0" prefHeight="25.0" prefWidth="149.0" />
+      <Label layoutX="30.0" layoutY="46.0" text="Número 1:" />
+      <Label layoutX="30.0" layoutY="80.0" text="Número 2:" />
+      <Label layoutX="30.0" layoutY="165.0" text="Resultado:" />
+      <Button fx:id="btnsoma" layoutX="146.0" layoutY="116.0" mnemonicParsing="false" onAction="#somar" text="Soma" />
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="320.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Cadastros">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#abrirCadastroAluno" text="Aluno" />
+                  <MenuItem mnemonicParsing="false" onAction="#fecharProjeto" text="Fechar" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
     </children>
 </AnchorPane>
